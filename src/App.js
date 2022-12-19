@@ -9,10 +9,11 @@ function App() {
   return (
     <>
       <Router>
-        <NavBar />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/singleproduct/:id" element={<SingleProduct />} />
+          <Route path="/" element={<NavBar />}>
+            <Route path="/" element={<Home />} />
+            <Route path="/singleproduct/:id" element={<SingleProduct />} />
+          </Route>
           <Route path="*" element={<ErrorPage />} />
         </Routes>
       </Router>

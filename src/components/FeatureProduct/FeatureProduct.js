@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import Slider from "react-slick";
 import { useProductContext } from "../../context/ProductContext";
 import { featureProductsSettings } from "../../Data/SliderData";
+import FormatPrice from "../Helpers/FormatPrice";
 
 const FeatureProduct = () => {
   const { isLoading, featureProducts } = useProductContext();
@@ -51,7 +52,7 @@ const FeatureProduct = () => {
                         </span>
                         <div className="flex gap-2 mx-2">
                           <span className="text-[#000]/60 text-base font-[500]">
-                            ${value.price}
+                            <FormatPrice price={value.price} />
                           </span>
                         </div>
                       </div>

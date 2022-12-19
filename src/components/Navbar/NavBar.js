@@ -1,4 +1,5 @@
 import React from "react";
+import { Outlet } from "react-router-dom";
 import BottomHeader from "./BottomHeader";
 import TopHeader from "./TopHeader";
 
@@ -7,6 +8,7 @@ const NavBar = () => {
     <>
       <TopHeader />
       <BottomHeader />
+      <Outlet />
     </>
   );
 };
