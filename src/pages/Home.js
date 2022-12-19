@@ -3,6 +3,7 @@ import HeroSection from "../components/Slider/HeroSection";
 import SpecialDis from "../components/DiscountComponents/SpecialDis";
 import SmartItems from "../components/DiscountComponents/SmartItems";
 import POW from "../components/ProductOfTheWeek/POW";
+import FeatureProducts from "../components/FeatureProduct/FeatureProduct";
 
 const Home = () => {
   return (
@@ -11,6 +12,7 @@ const Home = () => {
       <SpecialDis />
       <POW />
       <SmartItems />
+      <FeatureProducts />
     </>
   );
 };

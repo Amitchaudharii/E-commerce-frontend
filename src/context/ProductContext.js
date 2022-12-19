@@ -18,7 +18,7 @@ const AppProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   const getProducts = async (url) => {
-    dispatch({ type: "SEET_LOADING" });
+    dispatch({ type: "SET_LOADING" });
     try {
       const res = await axios.get(url);
       const products = await res.data;
