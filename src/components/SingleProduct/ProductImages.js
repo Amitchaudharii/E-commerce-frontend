@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
 const ProductImages = ({ imgs = [{ url: "" }] }) => {
-  console.log(imgs);
   const [mainImg, setMainImg] = useState(imgs[0]);
   return (
     <>
