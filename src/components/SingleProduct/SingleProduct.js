@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useProductContext } from "../../context/ProductContext";
-import FormatPrice from "../Helpers/FormatPrice";
+import FormatPrice from "../../Helpers/FormatPrice";
 import AddToCart from "./AddToCart";
 import ColorsPick from "./ColorsPick";
 import PageNavigation from "./PageNavigation";
@@ -80,7 +80,7 @@ const SingleProduct = () => {
                 items available:{" "}
                 <span className="text-[#ff6000] font-bold">{stock}</span>
               </span>
-              <ColorsPick product={singleProduct} />
+              {/* <ColorsPick product={singleProduct} /> */}
             </div>
             <AddToCart product={singleProduct} />
           </div>

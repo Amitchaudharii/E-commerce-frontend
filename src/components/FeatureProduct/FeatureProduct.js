@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import Slider from "react-slick";
 import { useProductContext } from "../../context/ProductContext";
 import { featureProductsSettings } from "../../Data/SliderData";
-import FormatPrice from "../Helpers/FormatPrice";
+import FormatPrice from "../../Helpers/FormatPrice";
 
 const FeatureProduct = () => {
   const { isLoading, featureProducts } = useProductContext();
