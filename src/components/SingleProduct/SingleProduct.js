@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { useProductContext } from "../../context/ProductContext";
+import { useProductContext } from "../../Context/ProductContext";
 import FormatPrice from "../../Helpers/FormatPrice";
 import AddToCart from "./AddToCart";
 import ColorsPick from "./ColorsPick";
-import PageNavigation from "./PageNavigation";
+import PageNavigation from "../NavigationSection/PageNavigation";
 import ProductImages from "./ProductImages";
 import Star from "./Star";
 
