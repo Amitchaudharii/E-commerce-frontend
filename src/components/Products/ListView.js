@@ -4,7 +4,6 @@ import FormatPrice from "../../Helpers/FormatPrice";
 import Star from "../SingleProduct/Star";
 
 const ListView = ({ products }) => {
-  console.log(products);
   return (
     <>
       <div className="grid gap-10">

@@ -3,7 +3,7 @@ import FillterSection from "../../components/Products/FillterSection";
 import PageNavigation from "../../components/NavigationSection/PageNavigation";
 import ProductsSection from "../../components/Products/ProductsSection";
 import AdSection from "../../components/Products/AdSection";
-import Shorting from "../../components/Products/Shorting";
+import Sorting from "../../components/Products/Sorting";
 
 const Products = () => {
   return (
@@ -18,7 +18,7 @@ const Products = () => {
           {/* main section */}
           <div className="w-3/4">
             <AdSection />
-            <Shorting />
+            <Sorting />
             <ProductsSection />
           </div>
         </div>
