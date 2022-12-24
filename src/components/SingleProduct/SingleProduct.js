@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { useProductContext } from "../../Context/ProductContext";
+import { useProductContext } from "../../Context/Product_Context";
 import FormatPrice from "../../Helpers/FormatPrice";
 import AddToCart from "./AddToCart";
 import ColorsPick from "./ColorsPick";

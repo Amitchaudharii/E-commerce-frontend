@@ -1,11 +1,10 @@
 import React from "react";
 import { BsFillGrid3X3GapFill, BsListUl } from "react-icons/bs";
 import { NavLink } from "react-router-dom";
-import { useFilterContext } from "../../Context/FilterContext";
+import { useFilterContext } from "../../Context/Filter_Context";
 
 const Sorting = () => {
-  const { Grid_View, setGridView, setListView, setSorting } =
-    useFilterContext();
+  const { Grid_View, setGridView, setListView, sorting } = useFilterContext();
   return (
     <>
       <div className="flex justify-between my-10">
@@ -54,7 +53,7 @@ const Sorting = () => {
                   name="sort"
                   id="sort"
                   className="outline-none"
-                  onClick={setSorting}
+                  onClick={sorting}
                 >
                   <option value="lowest">Price(lowest)</option>
                   <option value="#" disabled></option>
