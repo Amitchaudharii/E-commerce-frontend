@@ -5,6 +5,7 @@ import SingleProduct from "../components/SingleProduct/SingleProduct";
 import ErrorPage from "../pages/Error/ErrorPage";
 import Home from "../pages/Home/Home";
 import Products from "../pages/Products/Products";
+import Cart from "../pages/Cart/Cart";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/products" element={<Products />} />
             <Route path="/singleproduct/:id" element={<SingleProduct />} />
+            <Route path="/cart" element={<Cart />} />
           </Route>
           <Route path="*" element={<ErrorPage />} />
         </Routes>

@@ -1,11 +1,13 @@
 import React from "react";
 import { useFilterContext } from "../../Context/Filter_Context";
+import FormatPrice from "../../Helpers/FormatPrice";
 
 const FillterSection = () => {
   const {
-    filters: { text, category, color },
+    filters: { text, category, color, price, minPrice, maxPrice },
     all_products,
     updateFilterValue,
+    clearFilters,
   } = useFilterContext();
 
   const getUniqueData = (data, element) => {
@@ -121,6 +123,24 @@ const FillterSection = () => {
           <h2 className="text-xl text-[#252525] capitalize font-[500] mb-5">
             filter by price
           </h2>
+          <span>
+            <FormatPrice price={price} />
+          </span>
+          <input
+            type="range"
+            name="price"
+            min={minPrice}
+            max={maxPrice}
+            value={price}
+            onChange={updateFilterValue}
+          />
+        </div>
+        <div>
+          <h2 className="text-xl text-[#252525] capitalize font-[500] mb-5">
+            Clear filter
+          </h2>
+
+          <button onClick={clearFilters}>Clear Fillters</button>
         </div>
       </div>
     </>

@@ -17,7 +17,7 @@ const Products = () => {
           </div>
           {/* main section */}
           <div className="w-3/4">
-            <AdSection />
+            {/* <AdSection /> */}
             <Sorting />
             <ProductsSection />
           </div>
