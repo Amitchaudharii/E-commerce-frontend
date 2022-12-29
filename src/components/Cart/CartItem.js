@@ -1,18 +1,29 @@
 import React from "react";
+import { FaTrash } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 import { useCartContext } from "../../Context/CartContext";
 import FormatPrice from "../../Helpers/FormatPrice";
 import CartAmountToggle from "../SingleProduct/CartAmountToggle";
 
 const CartItem = ({ id, name, image, color, price, amount }) => {
-  const { setDecrease, setIncrement } = useCartContext();
+  const { removeItem, setDecrease, setIncrement } = useCartContext();
 
   return (
     <>
-      <div className="flex justify-around py-5 border-b border-gray-300">
-        <div className="flex gap-2">
+      <div className="grid grid-cols-4 py-5 border-b border-gray-300">
+        <div className="flex justify-start items-center gap-5 ml-10">
           <div>
-            <img src={image} alt={id} className="w-10" />
+            <button>
+              <FaTrash
+                className="hover:text-[#ff6000]"
+                onClick={() => removeItem(id)}
+              />
+            </button>
+          </div>
+          <div>
+            <NavLink to={`/singleproduct/${id}`}>
+              <img src={image} alt={id} className="w-16" />
+            </NavLink>
           </div>
           <div>
             <NavLink to={`/singleproduct/${id}`}>
@@ -20,21 +31,21 @@ const CartItem = ({ id, name, image, color, price, amount }) => {
             </NavLink>
           </div>
         </div>
-        <div>
+        <div className="flex justify-center items-center">
           <div>
             <FormatPrice price={price} />
           </div>
         </div>
-        <div>
+        <div className="flex justify-center items-center">
           <div>
             <CartAmountToggle
               amount={amount}
-              setDecrease={setDecrease}
-              setIncrease={setIncrement}
+              setDecrease={() => setDecrease(id)}
+              setIncrease={() => setIncrement(id)}
             />
           </div>
         </div>
-        <div>
+        <div className="flex justify-center items-center">
           <div>
             <FormatPrice price={price * amount} />
           </div>

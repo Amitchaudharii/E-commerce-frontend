@@ -21,7 +21,7 @@ const FeatureProduct = () => {
           </h1>
 
           {/* Content */}
-          <div className="grid grid-cols-3">
+          <div className="grid grid-cols-3 gap-5">
             {featureProducts &&
               featureProducts.map((value, index) => {
                 return <Product key={index} {...value} />;
