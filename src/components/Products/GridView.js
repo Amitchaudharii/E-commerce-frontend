@@ -1,5 +1,5 @@
 import React from "react";
-import Product from "../FeatureProduct/Product";
+import Product from "./Product";
 
 const GridView = ({ products }) => {
   return (

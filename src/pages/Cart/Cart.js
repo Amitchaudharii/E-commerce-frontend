@@ -5,7 +5,7 @@ import { useCartContext } from "../../Context/CartContext";
 import FormatPrice from "../../Helpers/FormatPrice";
 
 const Cart = () => {
-  const { cart, clearCartData } = useCartContext();
+  const { cart, clearCartData, total_price, shipping_fee } = useCartContext();
 
   // For Cart Empty
   if (cart.length === 0) {
@@ -74,11 +74,15 @@ const Cart = () => {
               <div className="border border-gray-300 rounded px-3 mb-5">
                 <div className="flex justify-between border-b border-gray-300 py-3">
                   <span className="font-[500] text-base">Subtotal</span>
-                  <FormatPrice price={200} />
+                  <FormatPrice price={total_price} />
+                </div>
+                <div className="flex justify-between py-3">
+                  <span className="font-[500] text-base">Shipping Fee</span>
+                  <FormatPrice price={shipping_fee} />
                 </div>
                 <div className="flex justify-between py-3">
                   <span className="font-[500] text-base">Total</span>
-                  <FormatPrice price={200} />
+                  <FormatPrice price={total_price + shipping_fee} />
                 </div>
               </div>
               <button className="bg-gray-800 hover:bg-[#ff6000] transition-all uppercase text-white py-3 font-[500] text-base rounded-md">

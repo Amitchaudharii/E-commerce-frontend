@@ -1,12 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { useProductContext } from "../../Context/Product_Context";
+import { useProductContext } from "../../Context/ProductContext";
 import FormatPrice from "../../Helpers/FormatPrice";
 import AddToCart from "./AddToCart";
-import ColorsPick from "./ColorsPick";
 import PageNavigation from "../NavigationSection/PageNavigation";
 import ProductImages from "./ProductImages";
-import Star from "./Star";
+import Star from "../../Helpers/Star";
 
 const API = "https://api.pujakaitem.com/api/products";
 
@@ -18,12 +17,12 @@ const SingleProduct = () => {
 
   // Data Destructuring
   const {
-    id: ids,
+    // id: ids,
     name,
-    comapany,
+    // comapany,
     price,
     description,
-    category,
+    // category,
     stock,
     stars,
     reviews,

@@ -17,7 +17,7 @@ const POW = () => {
               <li
                 onClick={() => setActiveStatus(1)}
                 className={
-                  activeStatus == 1
+                  activeStatus === 1
                     ? "text-sm border-[#ff6000] pt-3 rounded-t text-[#ff6000]"
                     : "text-sm text-gray-500 py-3 flex items-center hover:text-[#ff6000] cursor-pointer"
                 }
@@ -25,14 +25,14 @@ const POW = () => {
                 <div className="flex items-center mb-3">
                   <span className="ml-1 font-semibold">Trend</span>
                 </div>
-                {activeStatus == 1 && (
+                {activeStatus === 1 && (
                   <div className="w-full h-[2px] bg-[#ff6000] rounded-sm" />
                 )}
               </li>
               <li
                 onClick={() => setActiveStatus(2)}
                 className={
-                  activeStatus == 2
+                  activeStatus === 2
                     ? "text-sm border-[#ff6000] pt-3 rounded-t text-[#ff6000]"
                     : "text-sm text-gray-500 py-3 flex items-center hover:text-[#ff6000] cursor-pointer"
                 }
@@ -40,14 +40,14 @@ const POW = () => {
                 <div className="flex items-center mb-3">
                   <span className="ml-1 font-semibold">Hot Sell</span>
                 </div>
-                {activeStatus == 2 && (
+                {activeStatus === 2 && (
                   <div className="w-full h-[2px] bg-[#ff6000] rounded-sm" />
                 )}
               </li>
               <li
                 onClick={() => setActiveStatus(3)}
                 className={
-                  activeStatus == 3
+                  activeStatus === 3
                     ? "text-sm border-[#ff6000] pt-3 rounded-t text-[#ff6000]"
                     : "text-sm text-gray-500 py-3 flex items-center hover:text-[#ff6000] cursor-pointer"
                 }
@@ -55,14 +55,14 @@ const POW = () => {
                 <div className="flex items-center mb-3">
                   <span className="ml-1 font-semibold">Featured</span>
                 </div>
-                {activeStatus == 3 && (
+                {activeStatus === 3 && (
                   <div className="w-full h-[2px] bg-[#ff6000] rounded-sm" />
                 )}
               </li>
               <li
                 onClick={() => setActiveStatus(4)}
                 className={
-                  activeStatus == 4
+                  activeStatus === 4
                     ? "text-sm border-[#ff6000] pt-3 rounded-t text-[#ff6000]"
                     : "text-sm text-gray-500 py-3 flex items-center hover:text-[#ff6000] cursor-pointer"
                 }
@@ -70,7 +70,7 @@ const POW = () => {
                 <div className="flex items-center mb-3">
                   <span className="ml-1 font-semibold">Best Seller</span>
                 </div>
-                {activeStatus == 4 && (
+                {activeStatus === 4 && (
                   <div className="w-full h-[2px] bg-[#ff6000] rounded-sm" />
                 )}
               </li>

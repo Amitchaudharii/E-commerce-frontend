@@ -1,10 +1,11 @@
 import React from "react";
-import { useFilterContext } from "../../Context/Filter_Context";
+import { useFilterContext } from "../../Context/FilterContext";
 import FormatPrice from "../../Helpers/FormatPrice";
 
 const FillterSection = () => {
   const {
-    filters: { text, category, color, price, minPrice, maxPrice },
+    // color for select mark
+    filters: { text, category, price, minPrice, maxPrice },
     all_products,
     updateFilterValue,
     clearFilters,

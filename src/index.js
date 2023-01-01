@@ -2,8 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App/App";
-import { AppProvider } from "./Context/Product_Context";
-import { FilterContextProvider } from "./Context/Filter_Context";
+import { AppProvider } from "./Context/ProductContext";
+import { FilterContextProvider } from "./Context/FilterContext";
 import { CartProvider } from "./Context/CartContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

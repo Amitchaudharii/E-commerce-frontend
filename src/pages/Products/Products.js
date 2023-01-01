@@ -2,7 +2,7 @@ import React from "react";
 import FillterSection from "../../components/Products/FillterSection";
 import PageNavigation from "../../components/NavigationSection/PageNavigation";
 import ProductsSection from "../../components/Products/ProductsSection";
-import AdSection from "../../components/Products/AdSection";
+// import AdSection from "../../components/Products/AdSection";
 import Sorting from "../../components/Products/Sorting";
 
 const Products = () => {

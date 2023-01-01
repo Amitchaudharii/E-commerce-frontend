@@ -15,7 +15,7 @@ const getLocalCartData = () => {
 const initialState = {
   cart: getLocalCartData(),
   total_item: "",
-  total_amount: "",
+  total_price: "",
   shipping_fee: 50000,
 };
 
@@ -42,6 +42,9 @@ const CartProvider = ({ children }) => {
 
   // Set Cart Data On LocalStorage
   useEffect(() => {
+    // dispatch({ type: "TOTAL_CART_ITEM" });
+    // dispatch({ type: "TOTAL_CART_PRICE" });
+    dispatch({ type: "TOTAL_CART_PRICE_ITEM" });
     localStorage.setItem("WowStore", JSON.stringify(state.cart));
   }, [state.cart]);
 

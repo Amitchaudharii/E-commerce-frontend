@@ -4,7 +4,7 @@ const CartReducer = (state, action) => {
 
     // Find existing Product
     let existingProduct = state.cart.find(
-      (curItem) => curItem.id == id + color
+      (curItem) => curItem.id === id + color
     );
 
     if (existingProduct) {
@@ -98,6 +98,54 @@ const CartReducer = (state, action) => {
     return {
       ...state,
       cart: [],
+    };
+  }
+
+  // if (action.type === "TOTAL_CART_ITEM") {
+  //   let updatedItemVal = state.cart.reduce((initialVal, curElem) => {
+  //     let { amount } = curElem;
+
+  //     initialVal = initialVal + amount;
+  //     return initialVal;
+  //   }, 0);
+  //   return {
+  //     ...state,
+  //     total_item: updatedItemVal,
+  //   };
+  // }
+
+  // if (action.type === "TOTAL_CART_PRICE") {
+  //   let total_price = state.cart.reduce((initialVal, curElem) => {
+  //     let { price, amount } = curElem;
+
+  //     initialVal = initialVal + price * amount;
+  //     return initialVal;
+  //   }, 0);
+  //   return {
+  //     ...state,
+  //     total_price,
+  //   };
+  // }
+
+  if (action.type === "TOTAL_CART_PRICE_ITEM") {
+    let { total_item, total_price } = state.cart.reduce(
+      (accum, curElem) => {
+        let { price, amount } = curElem;
+
+        accum.total_item += amount;
+        accum.total_price += price * amount;
+
+        return accum;
+      },
+      {
+        total_item: 0,
+        total_price: 0,
+      }
+    );
+    return {
+      ...state,
+      total_item,
+      total_price,
     };
   }
 

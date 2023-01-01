@@ -1,10 +1,6 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
-import Slider from "react-slick";
-import { useProductContext } from "../../Context/Product_Context";
-import { featureProductsSettings } from "../../Data/SliderData";
-import FormatPrice from "../../Helpers/FormatPrice";
-import Product from "./Product";
+import { useProductContext } from "../../Context/ProductContext";
+import Product from "../Products/Product";
 
 const FeatureProduct = () => {
   const { isLoading, featureProducts } = useProductContext();

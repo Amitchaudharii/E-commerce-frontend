@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import FormatPrice from "../../Helpers/FormatPrice";
-import Star from "../SingleProduct/Star";
+import Star from "../../Helpers/Star";
 
 const ListView = ({ products }) => {
   return (

@@ -1,7 +1,7 @@
 import React from "react";
 import { BsFillGrid3X3GapFill, BsListUl } from "react-icons/bs";
 import { NavLink } from "react-router-dom";
-import { useFilterContext } from "../../Context/Filter_Context";
+import { useFilterContext } from "../../Context/FilterContext";
 
 const Sorting = () => {
   const { Grid_View, setGridView, setListView, sorting } = useFilterContext();
